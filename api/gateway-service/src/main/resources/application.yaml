@@ -29,6 +29,11 @@ spring:
           predicates:
             - Path=/exchange/**
 
+        - id: product
+          uri: http://product:8080
+          predicates:
+            - Path=/product/**
+
 logging:
   level:
     store: ${LOGGING_LEVEL_STORE:debug}
