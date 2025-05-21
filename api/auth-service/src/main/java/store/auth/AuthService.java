@@ -48,10 +48,10 @@ public class AuthService {
 
         return generateToken(accountOut.id());
     }
-
     private String generateToken(String id) {
         Date notBefore = new Date();
-        Date expiration = new Date(notBefore.getTime() + 1000l * 60 * 60 * 24);
+        int daysToExpire = 30;
+        Date expiration = new Date(notBefore.getTime() + 1000L * 60 * 60 * 24 * daysToExpire);
         String token = jwtService.create(id, notBefore, expiration);
         return token;
     }
