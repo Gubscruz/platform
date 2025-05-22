@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>store</groupId>
-	<artifactId>product-service</artifactId>
+	<artifactId>order-service</artifactId>
 	<version>1.0.0</version>
 	<properties>
 		<java.version>21</java.version>
@@ -33,6 +33,16 @@
 		<dependency>
 			<groupId>store</groupId>
 			<artifactId>product</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>store</groupId>
+			<artifactId>order</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>store</groupId>
+			<artifactId>account</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
