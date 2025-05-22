@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import store.product.ProductController;
+import store.product.ProductOut;
+
 @Service
 public class OrderService {
 
@@ -12,7 +15,10 @@ public class OrderService {
     private OrderRepository orderRepository;
 
     @Autowired
-    private ItemRepository  itemRepository;
+    private ItemRepository itemRepository;
+
+    @Autowired
+    private ProductController productController;
 
     public Order findByIdOrder(String idOrder, String userId) {
         OrderModel model = orderRepository.findByIdOrderAndIdUser(idOrder, userId);
@@ -45,7 +51,7 @@ public class OrderService {
         existing.date(new Date());
         existing.total(calculateTotal(order.items()));
 
-        existing.items().clear();          // fluent accessor
+        existing.items().clear();
         persistItems(order.items(), existing);
 
         orderRepository.save(existing);
@@ -65,7 +71,7 @@ public class OrderService {
         for (Item i : items) {
             i.price(fetchPrice(i.productId()));
             ItemModel im = new ItemModel(i, order);
-            order.items().add(im);         // fluent accessor
+            order.items().add(im);
         }
     }
 
@@ -77,6 +83,7 @@ public class OrderService {
     }
 
     private Double fetchPrice(String productId) {
-        return 0.0;                        // stub – replace with product-service call
+        ProductOut product = productController.findByIdProduct(productId).getBody();
+        return product != null ? product.price() : 0.0;
     }
 }

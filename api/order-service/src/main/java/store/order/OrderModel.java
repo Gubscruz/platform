@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 @Table(name = "orders", schema = "store_order")
 @Getter
 @Setter
-@Accessors(fluent = true)          // generates fluent  accessors: id(), date() …
+@Accessors(fluent = true)
 @NoArgsConstructor
 public class OrderModel {
 
