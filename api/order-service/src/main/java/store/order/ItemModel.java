@@ -5,7 +5,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 
 @Entity
-@Table(name = "item", schema = "order")
+@Table(name = "item", schema = "store_order")
 @Getter @Setter @NoArgsConstructor @Accessors(fluent = true)
 public class ItemModel {
 

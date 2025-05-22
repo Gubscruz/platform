@@ -7,7 +7,7 @@ import lombok.*;
 import lombok.experimental.Accessors;
 
 @Entity
-@Table(name = "orders", schema = "order")
+@Table(name = "orders", schema = "store_order")
 @Getter
 @Setter
 @Accessors(fluent = true)          // generates fluent  accessors: id(), date() …
