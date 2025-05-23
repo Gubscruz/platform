@@ -5,4 +5,5 @@ env/
 .vscode/
 target/
 volume/
+config/
 __pycache__/
