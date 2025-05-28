@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: redis-secret
+stringData:
+  REDIS_PASSWORD: myredispass
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: redis }
+  template:
+    metadata:
+      labels: { app: redis }
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        args: ["--requirepass", "$(REDIS_PASSWORD)"]
+        env:
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis-secret
+              key: REDIS_PASSWORD
+        ports:
+        - containerPort: 6379
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+spec:
+  type: ClusterIP
+  ports:
+  - port: 6379
+  selector: { app: redis }

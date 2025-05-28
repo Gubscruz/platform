@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.StreamSupport;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,6 +14,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    @Cacheable(value = "productById", key = "#idProduct")
     public Product findByIdProduct(String idProduct) {
         return productRepository.findByIdProduct(idProduct).to();
     }

@@ -2,7 +2,7 @@ name: store
 
 services:
   
-  db:
+  postgres:
     image: postgres:latest
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-store}
@@ -18,7 +18,7 @@ services:
       context: ./account-service
       dockerfile: Dockerfile
     environment:
-      DATABASE_HOST: db
+      DATABASE_HOST: postgres
       DATABASE_USER: ${POSTGRES_USER:-store}
       DATABASE_PASSWORD: ${POSTGRES_PASSWORD:-store}
 
@@ -44,7 +44,7 @@ services:
       context: ./product-service
       dockerfile: Dockerfile
     environment:
-      DATABASE_HOST: db
+      DATABASE_HOST: postgres
       DATABASE_USER: ${POSTGRES_USER:-store}
       DATABASE_PASSWORD: ${POSTGRES_PASSWORD:-store}
 
@@ -54,7 +54,7 @@ services:
       context: ./order-service
       dockerfile: Dockerfile
     environment:
-      DATABASE_HOST: db
+      DATABASE_HOST: postgres
       DATABASE_USER: ${POSTGRES_USER:-store}
       DATABASE_PASSWORD: ${POSTGRES_PASSWORD:-store}
   # exchange:

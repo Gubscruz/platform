@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product
+  name: auth
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: product
+      app: auth
   template:
     metadata:
       labels:
-        app: product
+        app: auth
     spec:
       containers:
-          - name: product
-            image: 'gubscruz/product-service:latest'
+          - name: auth
+            image: 'gubscruz/auth-service:latest'
             imagePullPolicy: Always
             ports:
               - containerPort: 8080
@@ -37,30 +37,18 @@ spec:
                   secretKeyRef:
                     name: postgres-secrets
                     key: POSTGRES_PASSWORD
-              
-              - name: REDIS_HOST
-                value: redis
-              
-              - name: REDIS_PORT
-                value: "6379"
-
-              - name: REDIS_PASSWORD 
-                valueFrom:
-                  secretKeyRef:
-                    name: redis-secret
-                    key: REDIS_PASSWORD
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-    name: product
+    name: auth
     labels:
-        app: product
+        app: auth
 spec:
     type: ClusterIP
     ports:
         - port: 8080
     selector:
-        app: product
+        app: auth

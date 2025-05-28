@@ -25,5 +25,10 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            steps {
+                sh "kubectl apply -f ./k8s/product-service.yaml"
+            }
+        }
     }
 }

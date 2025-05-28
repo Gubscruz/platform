@@ -2,6 +2,17 @@ server:
   port: 8080
 
 spring:
+
+  cache:
+    type: redis
+    
+  data:
+    redis:
+      host: ${REDIS_HOST:redis}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 1000ms
+
   application:
     name: product
 
