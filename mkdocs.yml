@@ -1,8 +1,8 @@
-site_name: Platforms, Microservices, DevOps and APIs
-site_author: Sandmann, H.
-site_url: https://insper.github.io/platform
-repo_url: https://github.com/insper/platform
-repo_name: insper/platform
+site_name: Project Documentation
+site_author: Barroso, G.
+site_url: https://gubscruz.github.io/store-documentation
+repo_url: https://github.com/Gubscruz/platform
+repo_name: github/documentation.template
 
 theme:
   name: material
@@ -47,6 +47,7 @@ theme:
     - navigation.top
     - navigation.path
     - navigation.tracking
+    - navigation.expand
   icon:
     # logo: assets/images/devops
     admonition:
@@ -62,14 +63,12 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
-  # logo: assets/images/devops.png
-  logo: assets/images/insper.svg
 
 markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
-  - markdown_grid_tables:
+  - markdown_grid_tables
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.details
@@ -88,6 +87,10 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: python
+          class: python
+          validator: !!python/name:markdown_exec.validator
+          format: !!python/name:markdown_exec.formatter
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -98,9 +101,9 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.blocks.caption
   - tables
-
-
+      
 plugins:
   - glightbox
   - git-revision-date-localized:
@@ -111,6 +114,8 @@ plugins:
       branch: main
   - search
   - badges
+  - minify:
+      minify_html: true
   - markdown-exec
   - render_swagger:
       allow_arbitrary_locations : true
@@ -120,105 +125,21 @@ plugins:
         - ">"
 
 extra_javascript:
-  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax/es5/tex-mml-chtml.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-extra_css:
-  - assets/stylesheets/extra.css
+  - https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js
+  - https://fastly.jsdelivr.net/npm/echarts/dist/echarts.min.js
 
 nav:
   - Home: index.md
-  - 2025.1: versions/2025.1.md
-  - Checkpoints:
-    - 1. CRUD: checkpoints/checkpoint1.md
-    - 2. Gateway: checkpoints/checkpoint2.md
-    - 3. Security: checkpoints/checkpoint3.md
-    - 4. DevOps: checkpoints/checkpoint4.md
-    - 5. Orchestration: checkpoints/checkpoint5.md
-  - Exercises:
-    - 1. Exchange API: exercises/exercise1.md
-    - 2. Order and Product APIs: exercises/exercise2.md
-  - Concepts:
-    - Microservices: concepts/microservices.md
-    - Architectures: concepts/architectures.md
-  - Versions:
-    - 2025.1: ./versions/2025.1.md
-    - 2024.1: ./versions/2024.1.md
-  # - Handout:
-  #   - Microservices:
-  #     - Roadmap: ./handout/microservices/roadmap.md
-  #     - Account: ./handout/microservices/account.md
-  #     - Auth: ./handout/microservices/auth.md
-  #     - Discovery: ./handout/microservices/discovery.md
-  #     - Gateway: ./handout/microservices/gateway.md
-  #   - DevOps:
-  #     - Observability: ./handout/devops/observability.md
-  #   #   - Roadmap: ./handout/devops-roadmap.md
-  #     - Jenkins: ./handout/devops/jenkins.md
-  #   #   - Docker: ./handout/devops-docker.md
-  #     - Kubernetes: ./handout/devops/kubernetes.md
-  #   - Cloud:
-  #     - AWS:
-  #       - cli: ./handout/cloud/aws/cli.md
-  #       - eks: ./handout/cloud/aws/eks.md
-  #   - Architecture: ./handout/architecture.md
-  #   - Business: ./handout/business.md
-  # - API:
-  #   - Spring Boot Cloud: ./api/spring-boot-cloud.md
-  #   - Testing: ./api/testing.md
-  #   - Documentation: ./api/documentation.md
-  # - Platform:
-  #   - Concepts: ./platform/concepts.md
-  #   - Microservices: ./platform/microservices.md
-  #   - Discovery: ./platform/discovery.md
-  #   - Gateway: ./platform/gateway.md
-  #   - Config: ./platform/config.md
-  #   - Load Balancing: ./platform/load-balancing.md
-  #   - Circuit Breaker: ./platform/circuit-breaker.md
-  #   - Security:
-  #     - Concepts: ./platform/security/concepts.md
-  #     - JWT: ./platform/security/jwt.md
-  #     - OAuth2: ./platform/security/oauth2.md
-  #     # - Auth Service: ./platform/security/auth-service.md
-  #     # - OpenID: openid.md
-  #     # - SSO: sso.md
-  #   - Communication: ./platform/communcation.md
-  #   - Observability:
-  #     - Monitoring: ./platform/observability/monitoring.md
-  #     - Logging: ./platform/observability/logging.md
-  #     - Tracing: ./platform/observability/tracing.md
-  #   - Messaging: 
-  #     - Concepts: ./platform/messaging/concepts.md
-  #     - Kafka: ./platform/messaging/kafka.md
-  #     - RabbitMQ: ./platform/messaging/rabbitmq.md
-  #   - Database:
-  #     - Flyway: ./platform/database/flyway.md
-  #     - Caching: ./platform/database/caching.md
-  #     # - MongoDB: mongodb.md
-  #     # - Elasticsearch: elasticsearch.md
-  #   - Payment: ./platform/payment.md
-  # - DevOps:
-  #   - Concepts: ./devops/concepts.md
-  #   - Version Control: ./devops/version-control-system.md
-  #   - Docker: ./devops/docker.md
-  #   - Packaging: ./devops/packaging.md
-  #   - Release: ./devops/release.md
-  #   # - Nexus: nexus.md
-  #   # - SonarQube: sonarqube.md
-  #   - Kubernetes: ./devops/kubernetes.md
-  # - Cloud Computing:
-  #   - AWS: ./cloud/aws.md
-  #   - GCP: ./cloud/gcp.md
-  #   - Azure: ./cloud/azure.md
-  #   - GitActions: ./cloud/gitactions.md
-  #   - Terraform: ./cloud/terraform.md
-  # - Business:
-  #   - Concepts: ./business/concepts.md
-  - Appendix:
-    - REST vs GraphQL: ./appendix/rest-vs-graphql.md
-    - Versioning REST APIs: ./appendix/versioning-rest-apis.md
-    - RSA Algorithm: ./appendix/rsa.md
-    - Oh My Zsh: ./appendix/ohmyzsh.md
-    - Others: ./appendix/others.md
-  - Disclaimer: ./disclaimer.md
+  - Entregas:
+    - Exchange API: ./exchange/main.md
+    - Product API: ./product/main.md
+    - Order API: ./oreder/main.md
+    - Jenkins: ./jenkins/main.md
+    - Minikube: ./minikube/main.md
+  - Bottlenecks:
+    - Load Balancer: ./bottlenecks/load-balancer.md
+    - Cache: ./bottlenecks/cache.md
+  # - Projeto: ./projeto/main.md
