@@ -2,7 +2,7 @@ site_name: Project Documentation
 site_author: Barroso, G.
 site_url: https://gubscruz.github.io/store-documentation
 repo_url: https://github.com/Gubscruz/platform
-repo_name: github/documentation.template
+repo_name: github/patform
 
 theme:
   name: material
