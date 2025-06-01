@@ -3,6 +3,7 @@ package store.order;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import store.product.ProductController;
@@ -20,6 +21,7 @@ public class OrderService {
     @Autowired
     private ProductController productController;
 
+    @Cacheable(value = "orders", key = "#idOrder + '-' + #userId")
     public Order findByIdOrder(String idOrder, String userId) {
         OrderModel model = orderRepository.findByIdOrderAndIdUser(idOrder, userId);
         return model == null ? null : model.to();

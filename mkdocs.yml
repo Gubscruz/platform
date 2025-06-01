@@ -136,7 +136,7 @@ nav:
   - Entregas:
     - Exchange API: ./exchange/main.md
     - Product API: ./product/main.md
-    - Order API: ./oreder/main.md
+    - Order API: ./order/main.md
     - Jenkins: ./jenkins/main.md
     - Minikube: ./minikube/main.md
   - Bottlenecks:

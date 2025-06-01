@@ -40,11 +40,6 @@ spec:
           value: redis
         - name: SPRING_DATA_REDIS_PORT
           value: "6379"
-        - name: SPRING_DATA_REDIS_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: redis-secret
-              key: REDIS_PASSWORD
 ---
 apiVersion: v1
 kind: Service

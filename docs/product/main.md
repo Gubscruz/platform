@@ -27,6 +27,43 @@ flowchart LR
 
     **To consume the API, the user must be authenticated.**
 
+## Product Service
+
+Github repository: [Product Service](https://github.com/Gubscruz/product-service)
+
+```bash
+product/
+├── Product.java
+├── ProductApplication.java
+├── ProductModel.java
+├── ProductRepository.java
+├── ProductResource.java
+├── ProductService.java
+```
+
+## Product (contract)
+
+Github repository: [Product](https://github.com/Gubscruz/product)
+
+```bash
+product/
+├── ProductController.java
+├── ProductIn.java
+├── ProductOut.java
+```
+
+!!! info "Diagrams"
+
+    === "Request Flow"
+        ![](./img/fluxo.png){ width=100% }
+
+    === "Architecture"
+        ![](./img/service.png){ width=100% }
+
+    === "Entity Model"
+        ![](./img/schema.png){ width=100% }
+
+
 ## Product API
 
 The API has the following endpoints:
@@ -61,7 +98,7 @@ The API has the following endpoints:
         Response code: 200 (OK)
         ```
     === "Postman"
-        ![](./post-product.png){ width=100% }
+        ![](./img/post-product.png){ width=100% }
 
 
 !!! info "GET /product"
@@ -90,7 +127,7 @@ The API has the following endpoints:
         Response code: 200 (ok)
         ```
     === "Postman"
-        ![](./get-products.png){ width=100% }
+        ![](./img/get-products.png){ width=100% }
 
 !!! info "GET /product/{id}"
 
@@ -121,32 +158,4 @@ The API has the following endpoints:
         ```
 
     === "Postman"
-        ![](./delete-product.png){ width=100% }
-
-
-## Source code
-
-### Product Service
-
-Github repository: [Product Service](https://github.com/Gubscruz/product-service)
-
-```bash
-product/
-├── Product.java
-├── ProductApplication.java
-├── ProductModel.java
-├── ProductRepository.java
-├── ProductResource.java
-├── ProductService.java
-```
-
-### Product (contract)
-
-Github repository: [Product](https://github.com/Gubscruz/product)
-
-```bash
-product/
-├── ProductController.java
-├── ProductIn.java
-├── ProductOut.java
-```
+        ![](./img/delete-product.png){ width=100% }
