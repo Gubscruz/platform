@@ -11,8 +11,6 @@ The platform showcases modern micro-services, CI/CD and DevOps practices on top 
 |-------|------------|
 | **Data** | PostgreSQL schemas per service • Redis cache for hot products and orders |
 | **Security** | Bearer token auth & role-based access control |
-| **Observability** | Centralised logs, health probes & graceful shutdown |
-| **Dev Experience** | One-command bootstrapping with **Docker Compose** & **Makefile** |
 | **CI/CD** | Jenkins declarative pipelines → Docker Hub → Minikube/​Kubernetes |
 | **Docs** | Auto-published with **MkDocs-Material** + live Mermaid diagrams |
 
