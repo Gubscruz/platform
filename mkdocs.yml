@@ -140,6 +140,6 @@ nav:
     - Jenkins: ./jenkins/main.md
     - Minikube: ./minikube/main.md
   - Bottlenecks:
-    - Load Balancer: ./bottlenecks/load-balancer.md
-    - Cache: ./bottlenecks/cache.md
+    - Load Balancer: ./bottlenecks/load-balancer/main.md
+    - Cache: ./bottlenecks/cache/main.md
   # - Projeto: ./projeto/main.md
