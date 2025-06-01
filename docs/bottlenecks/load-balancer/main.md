@@ -10,7 +10,31 @@ gateway-service/
     │   └── ingress-gateway.yaml
 ```
 
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gateway-ingress
+  namespace: default
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: loja.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: gateway
+            port:
+              number: 8080
+```
 
 ## Request flow
 
-![](./img/discovery.png)
+![](./img/traffic-logic.png)
+
+## Visualizing on the terminal
+
+![](./img/describe.png){width="100%"}
