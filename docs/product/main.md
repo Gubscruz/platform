@@ -147,6 +147,11 @@ The API has the following endpoints:
         Response code: 200 (ok)
         ```
 
+    === "Postman"
+
+        ![](./img/get-by-id.png){ width=100% }
+
+
 !!! info "DELETE /product/{id}"
 
     Delete a product by its ID.

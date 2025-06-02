@@ -9,7 +9,9 @@ import lombok.experimental.Accessors;
 @Data
 @Builder
 @Accessors(fluent = true)
-public class Order {
+public class Order implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
+    
     private String id;
     private String idUser; // melhor passar o objeto account
     private Date date;
