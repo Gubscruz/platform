@@ -129,6 +129,9 @@ order/
         Response code: 400 (bad request), if the product does not exist.
         ```
 
+    === "Postman"
+        ![](./img/post-order.png){ width=100% }
+
 !!! info "GET /order"
 
     Get all orders **for the current user**.
@@ -153,6 +156,8 @@ order/
         ```bash
         Response code: 200 (ok)
         ```
+    === "Postman"
+        ![](./img/get-orders.png){ width=100% }
 
 !!! info "GET /order/{id}"
 
