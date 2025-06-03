@@ -89,8 +89,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
         - name: python
           class: python
-          validator: !!python/name:markdown_exec.validator
-          format: !!python/name:markdown_exec.formatter
+          # validator: !!python/name:markdown_exec.validator
+          # format: !!python/name:markdown_exec.formatter
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
