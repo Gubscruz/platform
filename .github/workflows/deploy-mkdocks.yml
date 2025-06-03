@@ -28,7 +28,6 @@ jobs:
                      mkdocs-git-committers-plugin \
                      mkdocs-minify-plugin \
                      mkdocs-render-swagger-plugin \
-                     mkdocs-termynal-plugin
 
       - name: Build MkDocs site
         run: mkdocs build --strict
