@@ -2,12 +2,10 @@ name: Deploy MkDocs to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build-deploy:
-    name: Build and Deploy MkDocs
     runs-on: ubuntu-latest
 
     steps:
@@ -24,15 +22,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs-material
-          pip install mkdocs-glightbox-plugin \
-                      mkdocs-git-revision-date-localized-plugin \
-                      mkdocs-git-authors-plugin \
-                      mkdocs-git-committers-plugin \
-                      mkdocs-minify-plugin \
-                      mkdocs-markdown-exec-plugin \
-                      mkdocs-render-swagger-plugin \
-                      mkdocs-termynal-plugin
+          pip install mkdocs-material \
+                     mkdocs-git-revision-date-localized-plugin \
+                     mkdocs-git-authors-plugin \
+                     mkdocs-git-committers-plugin \
+                     mkdocs-minify-plugin \
+                     mkdocs-markdown-exec-plugin \
+                     mkdocs-render-swagger-plugin \
+                     mkdocs-termynal-plugin
 
       - name: Build MkDocs site
         run: mkdocs build --strict
@@ -43,5 +40,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
           publish_branch: gh-pages
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
