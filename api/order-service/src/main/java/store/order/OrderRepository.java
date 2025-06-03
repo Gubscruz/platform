@@ -12,5 +12,6 @@ public interface OrderRepository extends CrudRepository<OrderModel, String> {
     @EntityGraph(attributePaths = "items")        
     List<OrderModel> findAllByIdUser(String idUser);
 
+    @EntityGraph(attributePaths = "items")
     OrderModel findByIdOrderAndIdUser(String idOrder, String idUser);
 }

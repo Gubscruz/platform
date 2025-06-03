@@ -40,11 +40,11 @@ public class OrderModel {
 
     public Order to() {
         return Order.builder()
-                .id(idOrder)
-                .idUser(idUser)
-                .date(date)
-                .total(total)
-                .items(items.stream().map(ItemModel::to).toList())
-                .build();
+            .id(idOrder)
+            .idUser(idUser)
+            .date(date)
+            .total(total)
+            .items(items.stream().map(ItemModel::to).toList())
+            .build();
     }
 }
