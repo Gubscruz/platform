@@ -21,9 +21,7 @@ REST API that allows the user to convert between currencies implemented with Fas
     === "Postman"
         ![](./exchange.png){ width=100% }
 
-This API uses the ExchangeRate API to get the current exchange rates between currencies
-
-- [ExchangeRate-API](https://www.exchangerate-api.com/){target="_blank"};
+This API uses the [ExchangeRate-API](https://www.exchangerate-api.com/) to get the current exchange rates between currencies
 
 !!! warning "Attention"
 
