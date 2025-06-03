@@ -111,7 +111,6 @@ plugins:
       repository: hsandmann/hsandmann.github.com
       branch: main
   - search
-  - badges
   - minify:
       minify_html: true
   - markdown-exec
