@@ -7,28 +7,28 @@ The platform showcases modern micro-services, CI/CD and DevOps practices on top 
 ---
 
 ## Key Features
-| Layer | Highlights |
-|-------|------------|
-| **Data** | PostgreSQL schemas per service • Redis cache for hot products and orders |
-| **Security** | Bearer token auth & role-based access control |
-| **CI/CD** | Jenkins declarative pipelines → Docker Hub → Minikube/​Kubernetes |
-| **Docs** | Auto-published with **MkDocs-Material** + live Mermaid diagrams |
+| Layer        | Highlights                                                                      |
+|--------------|---------------------------------------------------------------------------------|
+| **Data**     | PostgreSQL schemas per service • Redis cache for hot products and orders        |
+| **Security** | Bearer token auth & role-based access control                                   |
+| **CI/CD**    | Jenkins declarative pipelines → Docker Hub → Minikube/​Kubernetes                |
+| **Docs**     | Auto-published with **MkDocs-Material** + live Mermaid diagrams                  |
 
 ---
 
 ## Repository Map
 
-| Domain | “Contract” module | Implementation (Spring Boot service) |
-|--------|------------------|---------------------------------------|
-| Authentication | [`auth`](api/auth) | [`auth-service`](api/auth-service) |
-| Accounts | [`account`](api/account) | [`account-service`](api/account-service) |
-| Products | [`product`](api/product) | [`product-service`](api/product-service) |
-| Orders | [`order`](api/order) | [`order-service`](api/order-service) |
-| Gateway | [`gateway`](api/gateway) | [`gateway-service`](api/gateway-service) |
-| Exchange Rates | n/a | [`exchange-service`](api/exchange-service – Python) |
+| Domain            | “Contract” module                                                           | Implementation (Spring Boot service)                                                 |
+|-------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Authentication    | [`auth`](https://github.com/Gubscruz/auth)                                   | [`auth-service`](https://github.com/Gubscruz/auth-service)                            |
+| Accounts          | [`account`](https://github.com/Gubscruz/account)                             | [`account-service`](https://github.com/Gubscruz/account-service)                      |
+| Products          | [`product`](https://github.com/Gubscruz/product)                             | [`product-service`](https://github.com/Gubscruz/product-service)                      |
+| Orders            | [`order`](https://github.com/Gubscruz/order)                                 | [`order-service`](https://github.com/Gubscruz/order-service)                          |
+| Gateway           | [`gateway`](https://github.com/Gubscruz/gateway)                             | [`gateway-service`](https://github.com/Gubscruz/gateway-service)                      |
+| Exchange Rates    | n/a                                                                          | [`exchange-service`](https://github.com/Gubscruz/exchange-service) – Python           |
 
-> **Tip:** Each `*-service` folder ships its own Dockerfile,
-> Kubernetes manifests (`k8s/*.yaml`) and Jenkinsfile.
+> **Tip:** Cada pasta `*-service` inclui seu próprio Dockerfile,  
+> manifests Kubernetes (`k8s/*.yaml`) e Jenkinsfile.
 
 ---
 
