@@ -17,6 +17,9 @@ REST API that allows the user to convert between currencies implemented with Fas
         ```bash
         Response code: 200 (ok)
         ```
+    
+    === "Postman"
+        ![](./exchange.png){ width=100% }
 
 This API uses the ExchangeRate API to get the current exchange rates between currencies
 
