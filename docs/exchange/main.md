@@ -1,5 +1,7 @@
 REST API that allows the user to convert between currencies implemented with FastAPI[^1]
 
+- Github repository: [Exchange Service](https://github.com/Gubscruz/exchange-service)
+
 !!! info "GET /exchange-rate/{from}/{to}"
 
     Get the current of a coin from one currency to another. E.g. `GET /coin/USD/EUR`.
@@ -21,7 +23,7 @@ REST API that allows the user to convert between currencies implemented with Fas
     === "Postman"
         ![](./exchange.png){ width=100% }
 
-This API uses the [ExchangeRate-API](https://www.exchangerate-api.com/) to get the current exchange rates between currencies
+This API uses the [ExchangeRate-API](https://www.exchangerate-api.com/) to get the current exchange rates between currencies.
 
 !!! warning "Attention"
 
