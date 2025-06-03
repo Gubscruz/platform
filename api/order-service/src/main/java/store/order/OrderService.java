@@ -41,6 +41,8 @@ public class OrderService {
         OrderModel saved = orderRepository.save(new OrderModel(order));
         persistItems(order.items(), saved);
 
+        saved = orderRepository.save(saved);
+
         return saved.to();
     }
 
