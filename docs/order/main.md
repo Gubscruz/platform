@@ -195,8 +195,5 @@ order/
         Response code: 404 (not found), if the order does not belong to the current user.
         ```
 
-## Additionals
-
-Additional features are welcome, such as:
-
-- Search products by "like" name;
+    === "Postman"
+        ![](./img/get-order.png){ width=100% }
