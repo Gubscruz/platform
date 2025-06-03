@@ -115,10 +115,6 @@ plugins:
       minify_html: true
   - render_swagger:
       allow_arbitrary_locations : true
-  - termynal:
-      prompt_literal_start:
-        - "$"
-        - ">"
 
 extra_javascript:
   - https://unpkg.com/mathjax/es5/tex-mml-chtml.js
