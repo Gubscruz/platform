@@ -27,7 +27,6 @@ jobs:
                      mkdocs-git-authors-plugin \
                      mkdocs-git-committers-plugin \
                      mkdocs-minify-plugin \
-                     mkdocs-markdown-exec-plugin \
                      mkdocs-render-swagger-plugin \
                      mkdocs-termynal-plugin
 
