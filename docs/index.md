@@ -108,6 +108,6 @@ flowchart TB
 
 ## Group Project Video:
 
-![Watch the video](https://youtu.be/eFAjEHgr9Eo)
+<iframe width="100%" height="470" src="https://youtu.be/eFAjEHgr9Eo" allowfullscreen></iframe>
 
 > This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)
