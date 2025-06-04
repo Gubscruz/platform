@@ -120,14 +120,5 @@ flowchart TB
 
 
 [Part 2](https://www.youtube.com/watch?v=ZtHgf-SulBY&ab_channel=AndrePereira)
-<iframe
-  width="100%"
-  height="470"
-  src="https://www.youtube.com/watch?v=ZtHgf-SulBY&ab_channel=AndrePereira"
-  title="Group Project Video"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
 
 > This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)
