@@ -89,3 +89,5 @@ the second request took about **22 milliseconds**, showing that the product was 
 
         }
         ```
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)

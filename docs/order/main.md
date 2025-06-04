@@ -197,3 +197,6 @@ order/
 
     === "Postman"
         ![](./img/get-order.png){ width=100% }
+
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)

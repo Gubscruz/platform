@@ -38,3 +38,5 @@ spec:
 ## Visualizing on the terminal
 
 ![](./img/describe.png){width="100%"}
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)

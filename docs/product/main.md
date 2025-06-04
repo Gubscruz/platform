@@ -164,3 +164,6 @@ The API has the following endpoints:
 
     === "Postman"
         ![](./img/delete-product.png){ width=100% }
+
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)

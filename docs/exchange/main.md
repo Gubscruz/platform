@@ -64,3 +64,5 @@ Code for the `exchange`:
     ``` { .groovy .copy .select linenums="1" }
     --8<-- "https://raw.githubusercontent.com/Gubscruz/platform/refs/heads/main/api/exchange-service/main.py"
     ```
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)

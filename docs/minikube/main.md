@@ -86,3 +86,6 @@ spec:
   selector:
     app: product
 ```
+
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)

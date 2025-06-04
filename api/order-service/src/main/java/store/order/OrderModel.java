@@ -36,17 +36,26 @@ public class OrderModel {
         this.idUser  = source.idUser();
         this.date    = source.date();
         this.total   = source.total();
-    }
-
-    public OrderModel(Order source) {
-        this.idOrder = source.id();
-        this.idUser  = source.idUser();
-        this.date    = source.date();
-        this.total   = source.total();
         if (source.items() != null) {
             for (Item item : source.items()) {
                 this.items.add(new ItemModel(item, this));
             }
         }
+    }
+
+    public Order to() {
+        List<Item> domainItems = items == null
+                ? new ArrayList<>()
+                : items.stream()
+                       .map(ItemModel::to)
+                       .collect(Collectors.toList());
+
+        return Order.builder()
+                .id(idOrder)
+                .idUser(idUser)
+                .date(date)
+                .total(total)
+                .items(domainItems)
+                .build();
     }
 }

@@ -104,3 +104,6 @@ flowchart TB
     classDef db fill:#90EE90,stroke:#333,stroke-width:1px;
     classDef external fill:#D3D3D3,stroke:#333,stroke-width:1px;
 ```
+
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)
