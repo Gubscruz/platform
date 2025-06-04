@@ -106,4 +106,8 @@ flowchart TB
 ```
 
 
+## Group Project Video:
+
+![Watch the video](https://youtu.be/eFAjEHgr9Eo)
+
 > This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)
