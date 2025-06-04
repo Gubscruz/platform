@@ -119,6 +119,16 @@ flowchart TB
   allowfullscreen>
 </iframe>
 
+<iframe
+  width="100%"
+  height="470"
+  src="https://youtube.com/embed/Gse2Vfrhvho"
+  title="Horizontal Pod Autoscaling"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen>
+</iframe>
+
 ### Group Videos
 <iframe
   width="100%"
