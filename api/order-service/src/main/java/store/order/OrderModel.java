@@ -38,13 +38,15 @@ public class OrderModel {
         this.total   = source.total();
     }
 
-    public Order to() {
-        return Order.builder()
-            .id(idOrder)
-            .idUser(idUser)
-            .date(date)
-            .total(total)
-            .items(items.stream().map(ItemModel::to).toList())
-            .build();
+    public OrderModel(Order source) {
+        this.idOrder = source.id();
+        this.idUser  = source.idUser();
+        this.date    = source.date();
+        this.total   = source.total();
+        if (source.items() != null) {
+            for (Item item : source.items()) {
+                this.items.add(new ItemModel(item, this));
+            }
+        }
     }
 }
