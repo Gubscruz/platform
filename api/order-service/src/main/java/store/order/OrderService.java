@@ -39,9 +39,9 @@ public class OrderService {
         order.total(calculateTotal(order.items()));
 
         OrderModel saved = orderRepository.save(new OrderModel(order));
-        // persistItems(order.items(), saved);
+        persistItems(order.items(), saved);
 
-        // saved = orderRepository.save(saved);
+        saved = orderRepository.save(saved);
 
         return saved.to();
     }
