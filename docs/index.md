@@ -118,6 +118,8 @@ flowchart TB
   allowfullscreen>
 </iframe>
 
+
+[Part 2](https://www.youtube.com/watch?v=ZtHgf-SulBY&ab_channel=AndrePereira)
 <iframe
   width="100%"
   height="470"
