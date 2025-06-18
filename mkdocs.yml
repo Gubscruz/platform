@@ -136,8 +136,8 @@ nav:
     - Cache: ./bottlenecks/cache/main.md
   - Em Dupla:
     - HPA: ./em-dupla/hpa/hpa.md
-    - Costs: ./em-dupla/costs/costs.md
     - AWS & EKS: ./em-dupla/aws-eks/aws-eks.md
     - CI/CD: ./jenkins/main.md
     - PaaS Plan: ./em-dupla/paas-plan/paas-plan.md
+    - Costs: ./em-dupla/costs/costs.md
   # - Projeto: ./projeto/main.md
