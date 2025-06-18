@@ -138,6 +138,6 @@ nav:
     - HPA: ./em-dupla/hpa/hpa.md
     - Costs: ./em-dupla/costs/costs.md
     - AWS & EKS: ./em-dupla/aws-eks/aws-eks.md
-    # - CI/CD: ./jenkins/main.md
+    - CI/CD: ./jenkins/main.md
     - PaaS Plan: ./em-dupla/paas-plan/paas-plan.md
   # - Projeto: ./projeto/main.md
