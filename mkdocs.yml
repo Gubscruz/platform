@@ -134,4 +134,6 @@ nav:
   - Bottlenecks:
     - Load Balancer: ./bottlenecks/load-balancer/main.md
     - Cache: ./bottlenecks/cache/main.md
+  - Em Dupla:
+    - AWS & EKS: ./em-dupla/aws-eks.md
   # - Projeto: ./projeto/main.md
