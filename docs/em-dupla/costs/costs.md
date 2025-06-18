@@ -20,3 +20,5 @@ The AWS Cost Explorer projects approximately **$1 074.00 USD** in total charges 
 
 ![AWS 12-month cost prediction](./img/prediction.jpg){ width=100% }  
 *Figure 3: Forecasted AWS spending for the coming year*
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)

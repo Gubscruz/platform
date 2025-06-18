@@ -39,3 +39,5 @@ Under load, the HPA **increased** the number of gateway replicas:
 After terminating the load generator, the HPA **decreased** replicas back to the minimum:
 
 ![HPA Scaling Down After Load Stops](./img/not-scaled.jpg){ width=100% }
+
+> This MkDocs was created by [Gustavo Barroso Souza Cruz](https://github.com/Gubscruz)
